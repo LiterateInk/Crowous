@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: Crowous
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Mikkel
+    family-names: RINGAUD
+    email: mikkel@milescode.dev
+repository-code: 'https://github.com/LiterateInk/Crowous'
+url: 'https://literate.ink/crowous'
+repository-artifact: 'https://www.npmjs.com/package/crowous'
+abstract: >-
+  A small wrapper around the public JSON API for the
+  CROUS restaurants.
+keywords:
+  - unilim
+  - biome
+  - university
+  - wrapper
+  - api
+license: GPL-3.0
