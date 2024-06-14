@@ -1,6 +1,6 @@
 {
   "name": "crowous",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A small wrapper around the public API for the CROUS' mobile application.",
   "repository": "github:LiterateInk/Crowous",
   "main": "./dist/index.js",
