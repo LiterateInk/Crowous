@@ -21,7 +21,7 @@ void async function main() {
     else {
       console.log("\nMeals for today:");
       for (const meal of meals) {
-        console.log(`- ${meal.name} (${meal.information ?? "No information"})`);
+        console.log(`- ${meal.timing} (${meal.information ?? "No information"})`);
         for (const category of meal.categories) {
           console.log(`  - ${category.name}: ${category.dishes.join(", ")}`);
         }

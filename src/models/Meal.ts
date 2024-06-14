@@ -13,7 +13,7 @@ export enum MealTiming {
 
 export class Meal {
   public constructor (
-    public name: MealTiming,
+    public timing: MealTiming,
     public information: string | null,
     public categories: MealCategory[]
   ) {}
