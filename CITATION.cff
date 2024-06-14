@@ -14,9 +14,10 @@ repository-artifact: 'https://www.npmjs.com/package/crowous'
 abstract: >-
   A small wrapper around the public API for the CROUS' mobile application.
 keywords:
-  - unilim
-  - biome
-  - university
+  - crous
+  - restauration
+  - restaurant
   - wrapper
+  - university
   - api
 license: GPL-3.0
