@@ -19,6 +19,9 @@
     "lint": "tsc && eslint .",
     "tsx": "tsx"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "crous",
     "les-crous",
