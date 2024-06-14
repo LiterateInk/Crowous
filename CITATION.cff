@@ -11,8 +11,7 @@ authors:
 repository-code: 'https://github.com/LiterateInk/Crowous'
 url: 'https://literate.ink/crowous'
 abstract: >-
-  A small wrapper around the public JSON API for the
-  CROUS restaurants.
+  A small wrapper around the public API for the CROUS' mobile application.
 keywords:
   - unilim
   - biome
