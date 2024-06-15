@@ -15,7 +15,7 @@ A small wrapper around the [public API for the CROUS' mobile application](http:/
 
 ## Installation
 
-Use your favorite package manager to install [Pawnote from NPM](https://www.npmjs.com/package/crowous).
+Use your favorite package manager to install [Crowous from NPM](https://www.npmjs.com/package/crowous).
 
 ```bash
 # pnpm
