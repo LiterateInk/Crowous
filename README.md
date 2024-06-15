@@ -36,4 +36,4 @@ If you need complete examples, then we got **a lot** of those in the [`examples`
 
 If none of those are helpful, you can always [open an issue](https://github.com/LiterateInk/Crowous/issues) to ask for help.
 
-You can also join [LiterateInk's Discord server](https://literate.ink/discord) to talk about Pawdirecte, get help and be notified about the latest updates !
+You can also join [LiterateInk's Discord server](https://literate.ink/discord) to talk about Crowous, get help and be notified about the latest updates !
