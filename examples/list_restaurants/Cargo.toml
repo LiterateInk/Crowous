@@ -1,0 +1,10 @@
+[package]
+name = "list_restaurants"
+version.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[dependencies]
+crowous = { path = "../.." }
+tokio = { version = "1", features = ["full"] }
+serde_json = "1"

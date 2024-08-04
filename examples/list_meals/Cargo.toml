@@ -1,0 +1,9 @@
+[package]
+name = "list_meals"
+version.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[dependencies]
+crowous = { path = "../.." }
+tokio = { version = "1", features = ["full"] }
