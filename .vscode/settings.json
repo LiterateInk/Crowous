@@ -1,0 +1,10 @@
+{
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+
+  "markdownlint.config": {
+    "first-line-heading": false,
+    "no-inline-html": false
+  }
+}
