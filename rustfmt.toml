@@ -1,0 +1,4 @@
+tab_spaces = 2
+edition = "2021"
+trailing_comma = "Never"
+control_brace_style = "ClosingNextLine"
