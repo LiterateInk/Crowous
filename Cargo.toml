@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = ["examples/*"]
+
+[workspace.package]
+license = "GPL-3.0-or-later"
+version = "1.0.0"
+edition = "2021"
+
+[package]
+name = "crowous"
+version.workspace = true
+authors = ["LiterateInk <contact@literate.ink>"]
+documentation = "https://docs.literate.ink/crowous"
+repository = "https://github.com/LiterateInk/Crowous"
+description = "A wrapper for the Crous Mobile internal API."
+keywords = ["crous", "restaurant", "wrapper", "university"]
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+reqwest = "0.12"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
