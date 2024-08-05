@@ -7,7 +7,4 @@ pub struct Crous {
 
   /// Name of the Crous feed.
   pub name: String,
-
-  /// Always `false`, apparently.
-  pub is_default: bool,
 }
