@@ -446,7 +446,6 @@ name = "list_restaurants"
 version = "1.0.0"
 dependencies = [
  "crowous",
- "serde_json",
  "tokio",
 ]
 
