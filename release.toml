@@ -1,0 +1,3 @@
+tag-name = "rust-v{{version}}"
+tag-message = "Release v{{version}}"
+allow-branch = ["rust"]
