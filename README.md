@@ -1,6 +1,6 @@
 <img alt="Crowous Banner" src=".github/assets/banner.svg" width="100%" />
 
-Crowous **is not** affiliated with [Les Crous](https://www.lescrous.fr/) in any way.
+*This library **is not** affiliated with [Les Crous](https://www.lescrous.fr/) in any way.*
 
 ## What is "Les Crous" ?
 
