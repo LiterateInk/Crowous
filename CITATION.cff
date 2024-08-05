@@ -10,6 +10,7 @@ authors:
     email: vexitofficial@gmail.com
 repository-code: 'https://github.com/LiterateInk/Crowous'
 url: 'https://docs.literate.ink/crowous'
+repository-artifact: 'https://crates.io/crates/crowous'
 abstract: >-
   A wrapper for the Crous Mobile internal API.
 keywords:
