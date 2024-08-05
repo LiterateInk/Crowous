@@ -104,7 +104,7 @@ checksum = "06ea2b9bc92be3c2baa9334a323ebca2d6f074ff852cd1d7b11064035cd3868f"
 
 [[package]]
 name = "crowous"
-version = "1.0.0"
+version = "1.0.1"
 dependencies = [
  "reqwest",
  "serde",
@@ -427,7 +427,7 @@ checksum = "78b3ae25bc7c8c38cec158d1f2757ee79e9b3740fbc7ccf0e59e4b08d793fa89"
 
 [[package]]
 name = "list_crous"
-version = "1.0.0"
+version = "1.0.1"
 dependencies = [
  "crowous",
  "tokio",
@@ -435,7 +435,7 @@ dependencies = [
 
 [[package]]
 name = "list_meals"
-version = "1.0.0"
+version = "1.0.1"
 dependencies = [
  "crowous",
  "tokio",
@@ -443,7 +443,7 @@ dependencies = [
 
 [[package]]
 name = "list_restaurants"
-version = "1.0.0"
+version = "1.0.1"
 dependencies = [
  "crowous",
  "tokio",
