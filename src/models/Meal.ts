@@ -1,58 +1,37 @@
-import type { ApiMeal } from "~/api/restaurants";
-
-export interface MealCategory {
-  name: string;
-  dishes: string[];
-}
-
-export enum MealTiming {
-  MORNING = "MORNING",
-  MIDDAY = "MIDDAY",
-  EVENING = "EVENING"
-}
+import { translateMomentFromAPI, type Moment } from "~/models/Moment";
+import { translateMealCategoryFromAPI, type MealCategory, type MealCategoryAPI } from "~/models/MealCategory";
 
 export class Meal {
   public constructor (
-    public timing: MealTiming,
-    public information: string | null,
-    public categories: MealCategory[]
+    public moment: Moment,
+    public information: string | undefined,
+    public categories: Array<MealCategory>
   ) {}
+}
 
-  public static fromAPI (meal: ApiMeal): Meal {
-    const categories: MealCategory[] = [];
-    let information: string | null = null;
+export interface MealAPI {
+  name: string
+  foodcategory: Array<MealCategoryAPI>
+}
 
-    for (const category of meal.foodcategory) {
-      if (category.name === "informations") {
-        information = category.dishes[0].name;
-        continue;
+export const translateMealFromAPI = (api: MealAPI): Meal => {
+  let information: string | undefined;
+  const categories = api.foodcategory.map(translateMealCategoryFromAPI)
+    .filter((category) => {
+      if (category.name === "informations" || category.name === "Fermeture") {
+        if (typeof information === "undefined") {
+          information = category.dishes[0];
+        }
+
+        return false;
       }
 
-      categories.push({
-        name: category.name,
-        dishes: category.dishes.map((dish) => dish.name).filter(Boolean)
-      });
-    }
+      return true;
+    });
 
-    let name: MealTiming;
-    switch (meal.name) {
-      case "matin":
-        name = MealTiming.MORNING;
-        break;
-      case "midi":
-        name = MealTiming.MIDDAY;
-        break;
-      case "soir":
-        name = MealTiming.EVENING;
-        break;
-      default:
-        throw new TypeError(`Unknown meal name: ${meal.name}`);
-    }
-
-    return new Meal(
-      name,
-      information,
-      categories
-    );
-  }
-}
+  return new Meal(
+    translateMomentFromAPI(api.name),
+    information,
+    categories
+  );
+};
