@@ -7,6 +7,7 @@ async fn main() {
     .unwrap();
 
   for restaurant in available_restaurants {
-    println!("{}", serde_json::to_string_pretty(&restaurant).unwrap());
+    println!("{}", restaurant.title);
+    println!("=> {}\n", restaurant.address);
   }
 }
