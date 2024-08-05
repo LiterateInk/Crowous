@@ -30,11 +30,7 @@ pub fn parse_response(response: String) -> Vec<Crous> {
     let identifier = crous.url.split('/').collect::<Vec<&str>>()[4].to_string();
     let name = crous.name.replace("FLUX ", "");
 
-    crous_collection.push(Crous {
-      identifier,
-      name,
-      is_default: crous.is_default,
-    });
+    crous_collection.push(Crous { identifier, name });
   }
 
   crous_collection

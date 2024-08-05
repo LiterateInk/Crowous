@@ -58,8 +58,8 @@ pub struct Restaurant {
 }
 
 impl Restaurant {
-  pub fn is_open(&self, day: usize, moment: Moment) -> bool {
-    let day = self.opening.split(',').nth(day).unwrap_or("000");
+  pub fn is_open(&self, day_index: usize, moment: Moment) -> bool {
+    let day = self.opening.split(',').nth(day_index).unwrap_or("000");
     let opening = day.chars().nth(moment as usize).unwrap_or('0');
 
     opening == '1'
