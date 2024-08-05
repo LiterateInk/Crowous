@@ -4,8 +4,8 @@ pub use crous::*;
 mod restaurant;
 pub use restaurant::*;
 
-mod restaurant_type;
-pub use restaurant_type::*;
+mod restaurant_kind;
+pub use restaurant_kind::*;
 
 mod menu;
 pub use menu::*;
