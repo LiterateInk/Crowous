@@ -6,18 +6,16 @@ message: >-
 type: software
 authors:
   - given-names: Mikkel
-    family-names: RINGAUD
-    email: mikkel@milescode.dev
+    family-names: ALMONTE--RINGAUD
+    email: vexitofficial@gmail.com
 repository-code: 'https://github.com/LiterateInk/Crowous'
-url: 'https://literate.ink/crowous'
+url: 'https://docs.literate.ink/crowous'
 repository-artifact: 'https://www.npmjs.com/package/crowous'
 abstract: >-
-  A small wrapper around the public API for the CROUS' mobile application.
+  A wrapper for the Crous Mobile internal API.
 keywords:
   - crous
-  - restauration
   - restaurant
   - wrapper
   - university
-  - api
-license: GPL-3.0
+license: GPL-3.0-or-later
