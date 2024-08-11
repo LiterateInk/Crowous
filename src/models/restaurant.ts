@@ -1,6 +1,6 @@
 import type { RestaurantKind, Contact, Image, PaymentMethod, Menu } from "~/models";
 
-export interface Restaurant {
+export type Restaurant = Readonly<{
   id: number,
   title: string,
   latitude: number,
@@ -22,4 +22,4 @@ export interface Restaurant {
   photo: Image,
   paymentMethods: Array<PaymentMethod>,
   menus: Array<Menu>
-}
+}>;

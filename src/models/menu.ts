@@ -1,6 +1,6 @@
 import type { Meal } from "~/models";
 
-export interface Menu {
+export type Menu = Readonly<{
   date: Date
   meals: Array<Meal>
-}
+}>;
