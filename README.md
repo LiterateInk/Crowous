@@ -1,4 +1,4 @@
-<img alt="Crowous Banner" src=".github/assets/banner.svg" width="100%" />
+<img alt="Crowous: A wrapper for the Crous Mobile internal API" src=".github/assets/banner.svg" width="100%" />
 
 *This library **is not** affiliated with [Les Crous](https://www.lescrous.fr/) in any way.*
 
@@ -20,4 +20,4 @@ Since we're implementing this library in different programming languages, we hav
 
 ## License
 
-This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details.
