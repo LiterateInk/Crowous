@@ -1,4 +1,4 @@
-<img alt="Crowous Banner" src="https://raw.githubusercontent.com/LiterateInk/Crowous/index/.github/assets/banner.svg" width="100%" />
+<img alt="Crowous: A wrapper for the Crous Mobile internal API" src="https://raw.githubusercontent.com/LiterateInk/Crowous/index/.github/assets/banner.svg" width="100%" />
 
 *This library **is not** affiliated with [Les Crous](https://www.lescrous.fr/) in any way.*
 
