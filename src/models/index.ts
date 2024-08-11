@@ -1,10 +1,12 @@
-export { Contact } from "~/models/Contact";
-export { Crous } from "~/models/Crous";
-export { Image } from "~/models/Image";
-export { Meal } from "~/models/Meal";
-export { MealCategory } from "~/models/MealCategory";
-export { Menu } from "~/models/Menu";
-export { Moment } from "~/models/Moment";
-export { PaymentMethod } from "~/models/PaymentMethod";
-export { Restaurant } from "~/models/Restaurant";
-export { RestaurantKind } from "~/models/RestaurantKind";
+export * from "./errors/unknown-enum";
+
+export * from "./contact";
+export * from "./feed";
+export * from "./image";
+export * from "./meal-category";
+export * from "./meal";
+export * from "./menu";
+export * from "./moment";
+export * from "./payment-method";
+export * from "./restaurant-kind";
+export * from "./restaurant";
