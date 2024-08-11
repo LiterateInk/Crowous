@@ -1,6 +1,6 @@
 import { RestaurantKind, UnknownEnumValue } from "~/models";
 
-export function decodeRestaurantKind (value: any): RestaurantKind {
+export const decodeRestaurantKind = (value: any): RestaurantKind => {
   switch (value) {
     case "Cafétéria":
       return RestaurantKind.CAFETERIA;

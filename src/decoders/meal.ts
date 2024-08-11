@@ -3,7 +3,7 @@ import type { Meal, MealCategory } from "~/models";
 import { decodeMealCategory } from "./meal-category";
 import { decodeMoment } from "./moment";
 
-export function decodeMeal (meal: any): Meal {
+export const decodeMeal = (meal: any): Meal => {
   let information: string | undefined;
   const categories = meal.foodcategory.map(decodeMealCategory)
     .filter((category: MealCategory) => {

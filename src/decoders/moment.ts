@@ -1,6 +1,6 @@
 import { Moment, UnknownEnumValue } from "~/models";
 
-export function decodeMoment (value: any): Moment {
+export const decodeMoment = (value: any): Moment => {
   switch (value) {
     case "matin":
       return Moment.MORNING;

@@ -1,6 +1,6 @@
 import type { Feed } from "~/models";
 
-export function decodeFeed (feed: any): Feed {
+export const decodeFeed = (feed: any): Feed => {
   const name = feed.name.replace("FLUX ", "");
   const identifier = feed.url.split("/")[4];
 
@@ -9,4 +9,4 @@ export function decodeFeed (feed: any): Feed {
     identifier,
     isDefault: feed.is_default
   };
-}
+};

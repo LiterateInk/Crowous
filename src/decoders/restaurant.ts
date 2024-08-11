@@ -5,7 +5,7 @@ import { decodeRestaurantKind } from "./restaurant-kind";
 import { decodeContact } from "./contact";
 import { decodeImage } from "./image";
 
-export function decodeRestaurant (restaurant: any): Restaurant {
+export const decodeRestaurant = (restaurant: any): Restaurant => {
   return {
     id: restaurant.id,
     title: restaurant.title,
@@ -29,4 +29,4 @@ export function decodeRestaurant (restaurant: any): Restaurant {
     paymentMethods: restaurant.payment.map(decodePaymentMethod),
     menus: restaurant.menus.map(decodeMenu)
   };
-}
+};

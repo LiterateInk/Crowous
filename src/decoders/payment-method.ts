@@ -1,6 +1,6 @@
 import { PaymentMethod, UnknownEnumValue } from "~/models";
 
-export function decodePaymentMethod (value: any): PaymentMethod {
+export const decodePaymentMethod = (value: any): PaymentMethod => {
   const unwrapped = value.name;
 
   switch (unwrapped) {
