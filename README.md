@@ -16,7 +16,7 @@ Since we're implementing this library in different programming languages, we hav
 
 | [JS/TS](https://github.com/LiterateInk/Crowous/tree/js) | [Rust](https://github.com/LiterateInk/Crowous/tree/rust) | Python | Swift |
 | :---:  | :---: | :---: | :---: |
-| Kotlin | C#    |       |       |
+| [Kotlin](https://github.com/LiterateInk/Crowous/tree/kotlin) | C#    |       |       |
 
 ## License
 
