@@ -6,6 +6,8 @@ plugins {
     alias(libs.plugins.androidLibrary)
 }
 
+version = "0.1.0"
+
 kotlin {
     jvm()
     androidTarget {
