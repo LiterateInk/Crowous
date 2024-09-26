@@ -49,7 +49,8 @@ kotlin {
     }
 }
 
-val groupName = "ink.literate." + libraryName.lowercase()
+val groupName = "ink.literate"
+val idLibraryName = libraryName.lowercase()
 group = groupName
 
 android {
@@ -61,13 +62,15 @@ android {
 }
 
 mavenPublishing {
-    coordinates(groupName, libraryName.lowercase(), version.toString())
+    coordinates(groupName, idLibraryName, version.toString())
 
     pom {
-        name.set(libraryName)
-        description.set("A wrapper for the Crous Mobile internal API.")
-        inceptionYear.set("2024")
-        url.set("https://github.com/LiterateInk/$libraryName")
+        name = libraryName
+        description = "A wrapper for the Crous Mobile internal API."
+        inceptionYear = "2024"
+
+        url = "https://docs.literate.ink/" + idLibraryName
+
         licenses {
             license {
                 name.set("GPL-3.0-or-later")
@@ -75,22 +78,21 @@ mavenPublishing {
                 distribution.set("https://www.gnu.org/licenses/gpl-3.0.txt")
             }
         }
+
         developers {
             developer {
-                id.set("literateink")
-                name.set("LiterateInk")
-                url.set("https://literate.ink")
+                organization = "LiterateInk"
+                organizationUrl = "https://literate.ink"
             }
         }
+
         scm {
-            url.set("https://github.com/LiterateInk/$libraryName")
-            connection.set("scm:git:git://github.com/LiterateInk/$libraryName.git")
-            developerConnection.set("scm:git:ssh://git@github.com/LiterateInk/$libraryName.git")
+            url = "https://github.com/LiterateInk/$libraryName"
+            connection = "scm:git:https://github.com/LiterateInk/$libraryName.git"
+            developerConnection = "scm:git:https://github.com/LiterateInk/$libraryName.git"
         }
     }
 
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
     signAllPublications()
 }
-
-
