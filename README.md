@@ -10,20 +10,20 @@
 <dependency>
   <groupId>ink.literate</groupId>
   <artifactId>crowous</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
 </dependency>
 ```
 
 ### Gradle (Kotlin)
 
 ```kotlin
-implementation("ink.literate:crowous:1.0.0")
+implementation("ink.literate:crowous:1.1.0")
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'ink.literate:crowous:1.0.0'
+implementation 'ink.literate:crowous:1.1.0'
 ```
 
 ## Documentation
