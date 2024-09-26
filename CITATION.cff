@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: Crowous
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - name: LiterateInk
+    website: "https://literate.ink"
+    email: contact@literate.ink
+repository-code: 'https://github.com/LiterateInk/Crowous'
+url: 'https://docs.literate.ink/crowous'
+repository-artifact: 'https://central.sonatype.com/artifact/ink.literate/crowous'
+abstract: >-
+  A wrapper for the Crous Mobile internal API.
+keywords:
+  - crous
+  - restaurant
+  - wrapper
+  - university
+  - api
+license: GPL-3.0-or-later
