@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import com.vanniktech.maven.publish.SonatypeHost
 
 val libraryName = "Crowous"
-version = "0.1.0"
+version = "1.0.0"
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
