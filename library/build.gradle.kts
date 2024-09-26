@@ -69,7 +69,7 @@ mavenPublishing {
         description = "A wrapper for the Crous Mobile internal API."
         inceptionYear = "2024"
 
-        url = "https://docs.literate.ink/" + idLibraryName
+        url = "https://docs.literate.ink/$idLibraryName"
 
         licenses {
             license {
