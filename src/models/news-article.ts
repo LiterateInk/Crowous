@@ -1,4 +1,4 @@
-export type NewsArticle = {
+export type NewsArticle = Readonly<{
   id: string
   title: string
   publicationDate: Date
@@ -8,4 +8,4 @@ export type NewsArticle = {
    */
   content: string
   category: string
-};
+}>;
