@@ -17,11 +17,6 @@ pnpm install
 
 ## Publishing
 
-Currently using `release-it` to create a tag and GitHub release.
+We use our internal tool [QuickRelease](https://github.com/LiterateInk/QuickRelease) to write a new release.
 
-```bash
-# Create a new release.
-pnpm release
-```
-
-An action will automatically publish the package to NPM when a tag is pushed to the repository.
+It'll bump the version, push a new tag and an action will automatically publish the package to NPM.
