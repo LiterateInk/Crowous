@@ -1,12 +1,11 @@
 boilerplate:
   kotlin: |
     import ink.literate.crowous.decoders.decodeFeed
-    import ink.literate.crowous.models.Feed
     import kotlinx.serialization.json.*
 
     fun main() {
-      val feed = decodeFeed(Json.parseToJsonElement([#0#]).jsonObject)
-      println(Feed::class.java.getField([#1#]).get(feed))
+      val feed = decodeFeed(Json.parseToJsonElement("[#0#]").jsonObject)
+      println(feed.[#1#])
     }
 
 tests:
