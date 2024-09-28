@@ -7,6 +7,10 @@ boilerplate:
       val feed = decodeFeed(Json.parseToJsonElement("[#0#]").jsonObject)
       println(feed.[#1#])
     }
+  js: |
+    import { decodeFeed } from "~/decoders/feed";
+    const feed = decodeFeed(JSON.parse("[#0#]"));
+    console.log(feed.[#1#]);
 
 tests:
   - name: "decodes the identifier"
