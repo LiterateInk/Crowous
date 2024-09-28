@@ -2,6 +2,7 @@ export * from "./errors/unknown-enum";
 
 export * from "./contact";
 export * from "./feed";
+export * from "./home";
 export * from "./image";
 export * from "./meal-category";
 export * from "./meal";
