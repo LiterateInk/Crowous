@@ -3,7 +3,7 @@ boilerplate:
     import ink.literate.crowous.decoders.decodeFeed
 
     fun main() {
-      val feed = decodeFeed(Json.parseToJsonElement("[#0#]"))
+      val feed = decodeFeed(Json.parseToJsonElement([#0#]))
       println(feed.identifier)
     }
 
