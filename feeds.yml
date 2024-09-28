@@ -1,11 +1,12 @@
 boilerplate:
   kotlin: |
     import ink.literate.crowous.decoders.decodeFeed
+    import ink.literate.crowous.models.Feed
     import kotlinx.serialization.json.*
 
     fun main() {
       val feed = decodeFeed(Json.parseToJsonElement([#0#]).jsonObject)
-      println(feed.identifier)
+      println(Feed::class.java.getField([#1#]).get(feed))
     }
 
 tests:
@@ -18,6 +19,7 @@ tests:
           "url": "http://webservices-v2.crous-mobile.fr:8080/feed/aix.marseille/externe/crous-aix.marseille.min.json",
           "is_default": false
         }
+      - "identifier"
     expected: "aix.marseille"
 
   - name: "decodes the name"
@@ -29,4 +31,5 @@ tests:
           "url": "http://webservices-v2.crous-mobile.fr:8080/feed/aix.marseille/externe/crous-aix.marseille.min.json",
           "is_default": false
         }
+      - "name"
     expected: "AIX-MARSEILLE"
