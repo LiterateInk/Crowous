@@ -1,0 +1,19 @@
+boilerplate:
+  kotlin: |
+    import ink.literate.crowous.decoders.decodeFeed
+
+    fun main() {
+      val feed = decodeFeed(Json.parseToJsonElement("[#0#]"))
+      println(feed.identifier)
+    }
+
+tests:
+  - name: "decodes the identifier"
+    arguments: 
+      - {
+        "id": 1,
+        "name": "FLUX AIX-MARSEILLE",
+        "url": "http://webservices-v2.crous-mobile.fr:8080/feed/aix.marseille/externe/crous-aix.marseille.min.json",
+        "is_default": false
+      }
+    expected: "aix-marseille"
