@@ -1,9 +1,10 @@
 boilerplate:
   kotlin: |
     import ink.literate.crowous.decoders.decodeFeed
+    import kotlinx.serialization.json.*
 
     fun main() {
-      val feed = decodeFeed(Json.parseToJsonElement([#0#]))
+      val feed = decodeFeed(Json.parseToJsonElement([#0#]).jsonObject)
       println(feed.identifier)
     }
 
