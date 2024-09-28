@@ -25,25 +25,22 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.cio)
+
                 implementation(libs.kotlinx.serialization.json)
                 implementation(libs.kotlinx.serialization.core)
+
                 implementation(libs.kotlinx.datetime)
-            }
-        }
-        val commonTest by getting {
-            dependencies {
-                implementation(libs.kotlin.test)
             }
         }
         val jvmMain by getting {
             dependencies {
-                implementation(libs.ktor.client.okhttp)
-                implementation(libs.kotlin.test)
+                implementation(libs.ktor.client.cio)
             }
         }
         val androidMain by getting {
             dependencies {
-                implementation(libs.ktor.client.okhttp)
+                implementation(libs.ktor.client.cio)
             }
         }
     }
