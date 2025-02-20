@@ -20,7 +20,7 @@ expose async function get_feeds () -> @array::of<feed> {
     @array::push(feed {
       name: name,
       identifier: identifier,
-      is_default: @json::get(feed, "is_default", "boolean")
+      is_default: @json::get<boolean>(feed, "is_default")
     });
   }
 
