@@ -1,4 +1,4 @@
-expose struct feed {
+expose record feed {
   name: string
   identifier: string
   is_default: boolean
