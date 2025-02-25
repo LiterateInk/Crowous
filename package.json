@@ -19,7 +19,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@inklang/http": "0.0.0-alpha.13385894095.1",
-    "@inklang/url": "0.0.0-alpha.13385894095.1"
+    "@inklang/http": "0.0.0-alpha.13439367196.1",
+    "@inklang/url": "0.0.0-alpha.13439367196.1"
   }
 }

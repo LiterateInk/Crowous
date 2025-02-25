@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@inklang/http':
-        specifier: 0.0.0-alpha.13385894095.1
-        version: 0.0.0-alpha.13385894095.1
+        specifier: 0.0.0-alpha.13439367196.1
+        version: 0.0.0-alpha.13439367196.1
       '@inklang/url':
-        specifier: 0.0.0-alpha.13385894095.1
-        version: 0.0.0-alpha.13385894095.1
+        specifier: 0.0.0-alpha.13439367196.1
+        version: 0.0.0-alpha.13439367196.1
     devDependencies:
       typescript:
         specifier: ^5.7.3
@@ -21,11 +21,11 @@ importers:
 
 packages:
 
-  '@inklang/http@0.0.0-alpha.13385894095.1':
-    resolution: {integrity: sha512-LDVpQMjU0f2lQ8KOkjKjPUkK6egcCcMFkuv0lyIJnq3dYrQw+KA/XeqsoVp0bEHj7bLsBY+7mbFgPSBDy8XZVw==}
+  '@inklang/http@0.0.0-alpha.13439367196.1':
+    resolution: {integrity: sha512-ekMBoY4VRODLxOTflYtERlrFyLBJVVoCFzuqdiNOw1qSair3gMXUfXd0EvFsomirvHoHIPyJFvFR3/0AfvY2ew==}
 
-  '@inklang/url@0.0.0-alpha.13385894095.1':
-    resolution: {integrity: sha512-0DfXmRuX3F01p+CP4UP8e9CTccX10NRgEo5LJlsjEUhF18te3uE2ZDaAC8nlOACCw2U6ZOeyO5rD2jWenOgRQQ==}
+  '@inklang/url@0.0.0-alpha.13439367196.1':
+    resolution: {integrity: sha512-C7umuy+Ac2eC9mb0r4AzU1fD2713NNFpWj1F/D4cx95Z0fdTepd9u1ctLk2931Ozyvv59emefYxpsTQ0l61RgQ==}
 
   typescript@5.7.3:
     resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
@@ -34,8 +34,8 @@ packages:
 
 snapshots:
 
-  '@inklang/http@0.0.0-alpha.13385894095.1': {}
+  '@inklang/http@0.0.0-alpha.13439367196.1': {}
 
-  '@inklang/url@0.0.0-alpha.13385894095.1': {}
+  '@inklang/url@0.0.0-alpha.13439367196.1': {}
 
   typescript@5.7.3: {}
