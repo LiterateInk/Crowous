@@ -1,0 +1,41 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@inklang/http':
+        specifier: 0.0.0-alpha.13385894095.1
+        version: 0.0.0-alpha.13385894095.1
+      '@inklang/url':
+        specifier: 0.0.0-alpha.13385894095.1
+        version: 0.0.0-alpha.13385894095.1
+    devDependencies:
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+packages:
+
+  '@inklang/http@0.0.0-alpha.13385894095.1':
+    resolution: {integrity: sha512-LDVpQMjU0f2lQ8KOkjKjPUkK6egcCcMFkuv0lyIJnq3dYrQw+KA/XeqsoVp0bEHj7bLsBY+7mbFgPSBDy8XZVw==}
+
+  '@inklang/url@0.0.0-alpha.13385894095.1':
+    resolution: {integrity: sha512-0DfXmRuX3F01p+CP4UP8e9CTccX10NRgEo5LJlsjEUhF18te3uE2ZDaAC8nlOACCw2U6ZOeyO5rD2jWenOgRQQ==}
+
+  typescript@5.7.3:
+    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+snapshots:
+
+  '@inklang/http@0.0.0-alpha.13385894095.1': {}
+
+  '@inklang/url@0.0.0-alpha.13385894095.1': {}
+
+  typescript@5.7.3: {}

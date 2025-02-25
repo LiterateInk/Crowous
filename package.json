@@ -1,0 +1,25 @@
+{
+  "name": "crowous",
+  "version": "2.0.0",
+  "repository": "https://github.com/LiterateInk/Crowous",
+  "description": "A wrapper for the Crous Mobile internal API.",
+  "sideEffects": false,
+  "main": "./generated/javascript/index.cjs",
+  "module": "./generated/javascript/index.mjs",
+  "types": "./generated/javascript/index.d.ts",
+  "exports": {
+    "types": "./generated/javascript/index.d.ts",
+    "import": "./generated/javascript/index.mjs",
+    "require": "./generated/javascript/index.cjs"
+  },
+  "files": [
+    "generated/javascript"
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@inklang/http": "0.0.0-alpha.13385894095.1",
+    "@inklang/url": "0.0.0-alpha.13385894095.1"
+  }
+}

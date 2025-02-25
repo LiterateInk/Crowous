@@ -1,0 +1,12 @@
+{
+  "name": "crowous",
+  "displayName": "Crowous",
+  "description": "A wrapper for the Crous Mobile internal API.",
+  "package": "ink.literate.crowous",
+  "version": "2.0.0",
+  "git": "https://github.com/LiterateInk/Crowous",
+  "annotations": [
+    "http",
+    "url"
+  ]
+}
