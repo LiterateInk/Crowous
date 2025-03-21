@@ -7,3 +7,15 @@ edition = "2021"
 path = "generated/rust/lib.rs"
 
 [dependencies]
+inklang_http = { git = "https://github.com/inklang/rust" }
+inklang_url = { git = "https://github.com/inklang/rust" }
+inklang_array = { git = "https://github.com/inklang/rust" }
+inklang_json = { git = "https://github.com/inklang/rust" }
+inklang_string = { git = "https://github.com/inklang/rust" }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+
+[[example]]
+name = "get_feeds"
+path = "examples/rust/get_feeds.rs"

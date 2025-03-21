@@ -1,4 +1,37 @@
+# JS/TS
 node_modules/
-.gradle/
+
+# Kotlin
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
 target/
 build/
+.kotlin
+
+# Swift
+/.build
+/Packages
+xcuserdata/
+DerivedData/
+.swiftpm/configuration/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+
+# Miscellaneous
+.DS_Store
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+*.iws
+*.iml
+*.ipr
+out/
+bin/

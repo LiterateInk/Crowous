@@ -8,34 +8,58 @@ importers:
 
   .:
     dependencies:
+      '@inklang/array':
+        specifier: 0.1.0-14001691298.1
+        version: 0.1.0-14001691298.1
       '@inklang/http':
-        specifier: 0.0.0-alpha.13439367196.1
-        version: 0.0.0-alpha.13439367196.1
+        specifier: 0.1.0-14001691298.1
+        version: 0.1.0-14001691298.1
+      '@inklang/json':
+        specifier: 0.1.0-14001691298.1
+        version: 0.1.0-14001691298.1
+      '@inklang/string':
+        specifier: 0.1.0-14001691298.1
+        version: 0.1.0-14001691298.1
       '@inklang/url':
-        specifier: 0.0.0-alpha.13439367196.1
-        version: 0.0.0-alpha.13439367196.1
+        specifier: 0.1.0-14001691298.1
+        version: 0.1.0-14001691298.1
     devDependencies:
       typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
+        specifier: ^5.8.2
+        version: 5.8.2
 
 packages:
 
-  '@inklang/http@0.0.0-alpha.13439367196.1':
-    resolution: {integrity: sha512-ekMBoY4VRODLxOTflYtERlrFyLBJVVoCFzuqdiNOw1qSair3gMXUfXd0EvFsomirvHoHIPyJFvFR3/0AfvY2ew==}
+  '@inklang/array@0.1.0-14001691298.1':
+    resolution: {integrity: sha512-4OuL3uIoSk+oHNR4X1TffLM+hWxx8sGdeBbYZxsMFfhLRYoP/c8WGb+gXV8TilEr9LU83xB7qp2OoEdkKvRlyQ==}
 
-  '@inklang/url@0.0.0-alpha.13439367196.1':
-    resolution: {integrity: sha512-C7umuy+Ac2eC9mb0r4AzU1fD2713NNFpWj1F/D4cx95Z0fdTepd9u1ctLk2931Ozyvv59emefYxpsTQ0l61RgQ==}
+  '@inklang/http@0.1.0-14001691298.1':
+    resolution: {integrity: sha512-r4WdrdWgDtjc0BYJEL5nxfJ0KqlEjm6Q47GjCQQbxLlHzxyW8zR/77TLXA8GUklBy1bOHT1yx3UwWK0OWz5eOQ==}
 
-  typescript@5.7.3:
-    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
+  '@inklang/json@0.1.0-14001691298.1':
+    resolution: {integrity: sha512-CWM4daTOQnliOrLQWo2YA7KVctUzDqU6IHLvFaFlvFWZXPFzipK5bZFugjtDFg90WFU04X5AqH5iqNR0JHnhoA==}
+
+  '@inklang/string@0.1.0-14001691298.1':
+    resolution: {integrity: sha512-MSlqO3SJM82B7EIa00VYHPygmXtIjIGDBjGO3C1cYEU1P8Co41R28WG0oiODTsmi7G3fb5ExQFMsPvxPjHnbkQ==}
+
+  '@inklang/url@0.1.0-14001691298.1':
+    resolution: {integrity: sha512-vlFXX9lIF5FKem6zabxjPKOrR4/NAaQMnr9uV/SZQlWgqECyMiL2lVNfQB0GlJpYgTGxKlC5rqA2FLlk5Ovn/Q==}
+
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
 snapshots:
 
-  '@inklang/http@0.0.0-alpha.13439367196.1': {}
+  '@inklang/array@0.1.0-14001691298.1': {}
 
-  '@inklang/url@0.0.0-alpha.13439367196.1': {}
+  '@inklang/http@0.1.0-14001691298.1': {}
 
-  typescript@5.7.3: {}
+  '@inklang/json@0.1.0-14001691298.1': {}
+
+  '@inklang/string@0.1.0-14001691298.1': {}
+
+  '@inklang/url@0.1.0-14001691298.1': {}
+
+  typescript@5.8.2: {}
