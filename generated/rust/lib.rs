@@ -14,30 +14,217 @@ pub async fn get_feeds() -> inklang_array::Of<Feed> {
         inklang_http::create_request("GET".to_string(), url, inklang_http::create_headers());
     let response: inklang_http::Response = inklang_http::send_request(request).await;
     let body: String = inklang_http::read_response_body_as_string(response).await;
-    let mut json: inklang_json::Value = inklang_json::parse(body);
+    let json: inklang_json::Value = inklang_json::parse(body.clone());
     let mut feeds: inklang_array::Of<Feed> = inklang_array::create();
-    for mut feed in inklang_json::as_array(inklang_json::get_property!(json, "results".to_string()))
-    {
+    for feed in inklang_json::as_array(inklang_json::get_property!(
+        json.clone(),
+        "results".to_string()
+    )) {
         let name: String = inklang_string::strip_all(
-            inklang_json::as_string(inklang_json::get_property!(feed, "name".to_string())),
+            inklang_json::as_string(inklang_json::get_property!(
+                feed.clone(),
+                "name".to_string()
+            )),
             "FLUX ".to_string(),
         );
         let parts: inklang_array::Of<String> = inklang_string::split(
-            inklang_json::as_string(inklang_json::get_property!(feed, "url".to_string())),
+            inklang_json::as_string(inklang_json::get_property!(feed.clone(), "url".to_string())),
             "/".to_string(),
         );
         let identifier: String = inklang_array::value_at_index(parts, 4);
         feeds = inklang_array::push(
             feeds,
             Feed {
-                name,
-                identifier,
+                name: name.clone(),
+                identifier: identifier.clone(),
                 is_default: inklang_json::as_boolean(inklang_json::get_property!(
-                    feed,
+                    feed.clone(),
                     "is_default".to_string()
                 )),
             },
         );
     }
     feeds
+}
+#[derive(Debug, Clone)]
+pub struct Image {
+    pub href: String,
+    pub description: String,
+}
+#[derive(Debug, Clone)]
+pub struct Contact {
+    pub phone: String,
+    pub email: String,
+}
+#[derive(Debug, Clone)]
+pub struct Restaurant {
+    pub id: u64,
+    pub title: String,
+    pub latitude: f64,
+    pub longitude: f64,
+    pub area: String,
+    pub address: String,
+    pub opening: String,
+    pub closing: String,
+    pub kind: String,
+    pub accessibility: bool,
+    pub wifi: bool,
+    pub short_description: String,
+    pub description: String,
+    pub access: String,
+    pub operational_hours: String,
+    pub contact: Contact,
+    pub crous_and_go: String,
+    pub album: inklang_option::Optional<Image>,
+    pub photo: Image,
+    pub payment_methods: inklang_array::Of<String>,
+}
+pub async fn get_restaurants(identifier: String) -> inklang_array::Of<Restaurant> {
+    let mut segments: inklang_array::Of<String> = inklang_array::create();
+    segments = inklang_array::push(
+        segments,
+        "http://webservices-v2.crous-mobile.fr/feed/".to_string(),
+    );
+    segments = inklang_array::push(segments, identifier.clone());
+    segments = inklang_array::push(segments, "/externe/".to_string());
+    segments = inklang_array::push(segments, "crous-".to_string());
+    segments = inklang_array::push(segments, identifier.clone());
+    segments = inklang_array::push(segments, ".min.json".to_string());
+    let url: inklang_url::Url = inklang_url::parse(inklang_string::concat(segments));
+    let request: inklang_http::Request =
+        inklang_http::create_request("GET".to_string(), url, inklang_http::create_headers());
+    let response: inklang_http::Response = inklang_http::send_request(request).await;
+    let body: String = inklang_http::read_response_body_as_string(response).await;
+    let content: String = inklang_string::strip_ctl(body.clone());
+    let json: inklang_json::Value = inklang_json::parse(content.clone());
+    let mut restaurants: inklang_array::Of<Restaurant> = inklang_array::create();
+    for restaurant in inklang_json::as_array(inklang_json::get_property!(
+        json.clone(),
+        "restaurants".to_string()
+    )) {
+        let contact_json: inklang_json::Value =
+            inklang_json::get_property!(restaurant.clone(), "contact".to_string());
+        let contact: Contact = Contact {
+            phone: inklang_json::as_string(inklang_json::get_property!(
+                contact_json.clone(),
+                "tel".to_string()
+            )),
+            email: inklang_json::as_string(inklang_json::get_property!(
+                contact_json.clone(),
+                "email".to_string()
+            )),
+        };
+        let photo_json: inklang_json::Value =
+            inklang_json::get_property!(restaurant.clone(), "photo".to_string());
+        let photo: Image = Image {
+            href: inklang_json::as_string(inklang_json::get_property!(
+                photo_json.clone(),
+                "src".to_string()
+            )),
+            description: inklang_json::as_string(inklang_json::get_property!(
+                photo_json.clone(),
+                "alt".to_string()
+            )),
+        };
+        let album_json: inklang_json::Value =
+            inklang_json::get_property!(restaurant.clone(), "album".to_string());
+        let mut album: inklang_option::Optional<Image> = inklang_option::undefined();
+        if inklang_json::is_defined(album_json.clone()) {
+            album = inklang_option::defined(Image {
+                href: inklang_json::as_string(inklang_json::get_property!(
+                    album_json.clone(),
+                    "src".to_string()
+                )),
+                description: inklang_json::as_string(inklang_json::get_property!(
+                    album_json.clone(),
+                    "alt".to_string()
+                )),
+            });
+        };
+        let mut payment_methods: inklang_array::Of<String> = inklang_array::create();
+        for payment_json in inklang_json::as_array(inklang_json::get_property!(
+            restaurant.clone(),
+            "payment".to_string()
+        )) {
+            let value: String = inklang_json::as_string(inklang_json::get_property!(
+                payment_json.clone(),
+                "name".to_string()
+            ));
+            payment_methods = inklang_array::push(payment_methods, value.clone());
+        }
+        restaurants = inklang_array::push(
+            restaurants,
+            Restaurant {
+                id: inklang_json::as_u64(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "id".to_string()
+                )),
+                title: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "title".to_string()
+                )),
+                latitude: inklang_json::as_f64(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "lat".to_string()
+                )),
+                longitude: inklang_json::as_f64(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "lon".to_string()
+                )),
+                area: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "area".to_string()
+                )),
+                address: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "adresse".to_string()
+                )),
+                opening: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "opening".to_string()
+                )),
+                closing: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "closing".to_string()
+                )),
+                kind: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "type".to_string()
+                )),
+                accessibility: inklang_json::as_boolean(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "accessibility".to_string()
+                )),
+                wifi: inklang_json::as_boolean(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "wifi".to_string()
+                )),
+                short_description: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "shortdesc".to_string()
+                )),
+                description: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "description".to_string()
+                )),
+                access: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "access".to_string()
+                )),
+                operational_hours: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "operationalhours".to_string()
+                )),
+                contact,
+                crous_and_go: inklang_json::as_string(inklang_json::get_property!(
+                    restaurant.clone(),
+                    "crousandgo".to_string()
+                )),
+                album,
+                photo,
+                payment_methods,
+            },
+        );
+    }
+    restaurants
 }

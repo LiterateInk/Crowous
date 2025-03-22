@@ -12,6 +12,7 @@ inklang_url = { git = "https://github.com/inklang/rust" }
 inklang_array = { git = "https://github.com/inklang/rust" }
 inklang_json = { git = "https://github.com/inklang/rust" }
 inklang_string = { git = "https://github.com/inklang/rust" }
+inklang_option = { git = "https://github.com/inklang/rust" }
 
 [dev-dependencies]
 tokio = { version = "1", features = ["full"] }
@@ -19,3 +20,6 @@ tokio = { version = "1", features = ["full"] }
 [[example]]
 name = "get_feeds"
 path = "examples/rust/get_feeds.rs"
+[[example]]
+name = "get_restaurants"
+path = "examples/rust/get_restaurants.rs"

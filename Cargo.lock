@@ -106,6 +106,7 @@ dependencies = [
  "inklang_array",
  "inklang_http",
  "inklang_json",
+ "inklang_option",
  "inklang_string",
  "inklang_url",
  "tokio",
@@ -540,12 +541,12 @@ dependencies = [
 [[package]]
 name = "inklang_array"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#c661558f8f81d7904987a9386a59fad8dfdeac49"
+source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
 
 [[package]]
 name = "inklang_http"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#c661558f8f81d7904987a9386a59fad8dfdeac49"
+source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
 dependencies = [
  "inklang_url",
  "reqwest",
@@ -554,7 +555,7 @@ dependencies = [
 [[package]]
 name = "inklang_json"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#c661558f8f81d7904987a9386a59fad8dfdeac49"
+source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
 dependencies = [
  "inklang_json_macro",
  "serde",
@@ -564,7 +565,7 @@ dependencies = [
 [[package]]
 name = "inklang_json_macro"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#c661558f8f81d7904987a9386a59fad8dfdeac49"
+source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -572,9 +573,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "inklang_option"
+version = "0.1.0"
+source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
+
+[[package]]
 name = "inklang_string"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#c661558f8f81d7904987a9386a59fad8dfdeac49"
+source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
 dependencies = [
  "inklang_array",
 ]
@@ -582,7 +588,7 @@ dependencies = [
 [[package]]
 name = "inklang_url"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#c661558f8f81d7904987a9386a59fad8dfdeac49"
+source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
 dependencies = [
  "url",
 ]
