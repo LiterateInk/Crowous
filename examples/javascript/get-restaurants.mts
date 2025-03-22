@@ -1,4 +1,4 @@
 import { getRestaurants } from "crowous";
 
-const restaurants = await getRestaurants("limoges");
+const restaurants = await getRestaurants("reims");
 console.log(restaurants);

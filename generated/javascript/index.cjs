@@ -3,9 +3,10 @@
 
 const { parse: inklang__url_parse } = require("@inklang/url");
 const { createRequest: inklang__http_createRequest, createHeaders: inklang__http_createHeaders, sendRequest: inklang__http_sendRequest, readResponseBodyAsString: inklang__http_readResponseBodyAsString } = require("@inklang/http");
-const { parse: inklang__json_parse, asArray: inklang__json_asArray, getProperty: inklang__json_getProperty, asString: inklang__json_asString, asBoolean: inklang__json_asBoolean } = require("@inklang/json");
+const { parse: inklang__json_parse, asArray: inklang__json_asArray, getProperty: inklang__json_getProperty, asString: inklang__json_asString, asBoolean: inklang__json_asBoolean, isDefined: inklang__json_isDefined, asU64: inklang__json_asU64, asF64: inklang__json_asF64 } = require("@inklang/json");
 const { create: inklang__array_create, valueAtIndex: inklang__array_valueAtIndex, push: inklang__array_push } = require("@inklang/array");
-const { stripAll: inklang__string_stripAll, split: inklang__string_split } = require("@inklang/string");
+const { stripAll: inklang__string_stripAll, split: inklang__string_split, concat: inklang__string_concat, stripCtl: inklang__string_stripCtl } = require("@inklang/string");
+const { undefined: inklang__option_undefined, defined: inklang__option_defined } = require("@inklang/option");
 
 export class Feed {
 	name;
@@ -34,3 +35,101 @@ const getFeeds = async () => {
 	return feeds;
 }
 exports.getFeeds = getFeeds;
+export class Image {
+	href;
+	description;
+	constructor (href, description) {
+		this.href = href;
+		this.description = description;
+	}
+}
+exports.Image = Image;
+export class Contact {
+	phone;
+	email;
+	constructor (phone, email) {
+		this.phone = phone;
+		this.email = email;
+	}
+}
+exports.Contact = Contact;
+export class Restaurant {
+	id;
+	title;
+	latitude;
+	longitude;
+	area;
+	address;
+	opening;
+	closing;
+	kind;
+	accessibility;
+	wifi;
+	shortDescription;
+	description;
+	access;
+	operationalHours;
+	contact;
+	crousAndGo;
+	album;
+	photo;
+	paymentMethods;
+	constructor (id, title, latitude, longitude, area, address, opening, closing, kind, accessibility, wifi, shortDescription, description, access, operationalHours, contact, crousAndGo, album, photo, paymentMethods) {
+		this.id = id;
+		this.title = title;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		this.area = area;
+		this.address = address;
+		this.opening = opening;
+		this.closing = closing;
+		this.kind = kind;
+		this.accessibility = accessibility;
+		this.wifi = wifi;
+		this.shortDescription = shortDescription;
+		this.description = description;
+		this.access = access;
+		this.operationalHours = operationalHours;
+		this.contact = contact;
+		this.crousAndGo = crousAndGo;
+		this.album = album;
+		this.photo = photo;
+		this.paymentMethods = paymentMethods;
+	}
+}
+exports.Restaurant = Restaurant;
+const getRestaurants = async (identifier) => {
+	let segments = inklang__array_create();
+	segments = inklang__array_push(segments, "http://webservices-v2.crous-mobile.fr/feed/");
+	segments = inklang__array_push(segments, identifier);
+	segments = inklang__array_push(segments, "/externe/");
+	segments = inklang__array_push(segments, "crous-");
+	segments = inklang__array_push(segments, identifier);
+	segments = inklang__array_push(segments, ".min.json");
+	let url = inklang__url_parse(inklang__string_concat(segments));
+	let request = inklang__http_createRequest("GET", url, inklang__http_createHeaders());
+	let response = await inklang__http_sendRequest(request);
+	let body = await inklang__http_readResponseBodyAsString(response);
+	let content = inklang__string_stripCtl(body);
+	let json = inklang__json_parse(content);
+	let restaurants = inklang__array_create();
+	for (let restaurant of inklang__json_asArray(inklang__json_getProperty(json, "restaurants"))) {
+		let contactJson = inklang__json_getProperty(restaurant, "contact");
+		let contact = new Contact(inklang__json_asString(inklang__json_getProperty(contactJson, "tel")), inklang__json_asString(inklang__json_getProperty(contactJson, "email")));
+		let photoJson = inklang__json_getProperty(restaurant, "photo");
+		let photo = new Image(inklang__json_asString(inklang__json_getProperty(photoJson, "src")), inklang__json_asString(inklang__json_getProperty(photoJson, "alt")));
+		let albumJson = inklang__json_getProperty(restaurant, "album");
+		let album = inklang__option_undefined();
+		if (inklang__json_isDefined(albumJson) == true) {
+			album = inklang__option_defined(new Image(inklang__json_asString(inklang__json_getProperty(albumJson, "src")), inklang__json_asString(inklang__json_getProperty(albumJson, "alt"))));
+		}
+		let paymentMethods = inklang__array_create();
+		for (let paymentJson of inklang__json_asArray(inklang__json_getProperty(restaurant, "payment"))) {
+			let value = inklang__json_asString(inklang__json_getProperty(paymentJson, "name"));
+			paymentMethods = inklang__array_push(paymentMethods, value);
+		}
+		restaurants = inklang__array_push(restaurants, new Restaurant(inklang__json_asU64(inklang__json_getProperty(restaurant, "id")), inklang__json_asString(inklang__json_getProperty(restaurant, "title")), inklang__json_asF64(inklang__json_getProperty(restaurant, "lat")), inklang__json_asF64(inklang__json_getProperty(restaurant, "lon")), inklang__json_asString(inklang__json_getProperty(restaurant, "area")), inklang__json_asString(inklang__json_getProperty(restaurant, "adresse")), inklang__json_asString(inklang__json_getProperty(restaurant, "opening")), inklang__json_asString(inklang__json_getProperty(restaurant, "closing")), inklang__json_asString(inklang__json_getProperty(restaurant, "type")), inklang__json_asBoolean(inklang__json_getProperty(restaurant, "accessibility")), inklang__json_asBoolean(inklang__json_getProperty(restaurant, "wifi")), inklang__json_asString(inklang__json_getProperty(restaurant, "shortdesc")), inklang__json_asString(inklang__json_getProperty(restaurant, "description")), inklang__json_asString(inklang__json_getProperty(restaurant, "access")), inklang__json_asString(inklang__json_getProperty(restaurant, "operationalhours")), contact, inklang__json_asString(inklang__json_getProperty(restaurant, "crousandgo")), album, photo, paymentMethods));
+	}
+	return restaurants;
+}
+exports.getRestaurants = getRestaurants;

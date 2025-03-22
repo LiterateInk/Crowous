@@ -19,10 +19,11 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@inklang/array": "0.1.0-14001691298.1",
-    "@inklang/http": "0.1.0-14001691298.1",
-    "@inklang/json": "0.1.0-14001691298.1",
-    "@inklang/string": "0.1.0-14001691298.1",
-    "@inklang/url": "0.1.0-14001691298.1"
+    "@inklang/array": "0.1.0-14010562932.1",
+    "@inklang/http": "0.1.0-14010562932.1",
+    "@inklang/json": "0.1.0-14010562932.1",
+    "@inklang/option": "0.1.0-14010562932.1",
+    "@inklang/string": "0.1.0-14010562932.1",
+    "@inklang/url": "0.1.0-14010562932.1"
   }
 }

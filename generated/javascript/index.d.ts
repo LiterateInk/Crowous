@@ -2,6 +2,7 @@
 // Do not edit it directly since it'll be overwritten.
 
 import type { Of as Inklang__array_Of } from "@inklang/array";
+import type { Optional as Inklang__option_Optional } from "@inklang/option";
 
 export class Feed {
 	public name: string;
@@ -10,3 +11,38 @@ export class Feed {
 	constructor (name: string, identifier: string, isDefault: boolean);
 }
 export const getFeeds: () => Promise<Inklang__array_Of<Feed>>
+
+export class Image {
+	public href: string;
+	public description: string;
+	constructor (href: string, description: string);
+}
+export class Contact {
+	public phone: string;
+	public email: string;
+	constructor (phone: string, email: string);
+}
+export class Restaurant {
+	public id: number;
+	public title: string;
+	public latitude: number;
+	public longitude: number;
+	public area: string;
+	public address: string;
+	public opening: string;
+	public closing: string;
+	public kind: string;
+	public accessibility: boolean;
+	public wifi: boolean;
+	public shortDescription: string;
+	public description: string;
+	public access: string;
+	public operationalHours: string;
+	public contact: Contact;
+	public crousAndGo: string;
+	public album: Inklang__option_Optional<Image>;
+	public photo: Image;
+	public paymentMethods: Inklang__array_Of<string>;
+	constructor (id: number, title: string, latitude: number, longitude: number, area: string, address: string, opening: string, closing: string, kind: string, accessibility: boolean, wifi: boolean, shortDescription: string, description: string, access: string, operationalHours: string, contact: Contact, crousAndGo: string, album: Inklang__option_Optional<Image>, photo: Image, paymentMethods: Inklang__array_Of<string>);
+}
+export const getRestaurants: (identifier: string) => Promise<Inklang__array_Of<Restaurant>>

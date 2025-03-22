@@ -9,20 +9,23 @@ importers:
   .:
     dependencies:
       '@inklang/array':
-        specifier: 0.1.0-14001691298.1
-        version: 0.1.0-14001691298.1
+        specifier: 0.1.0-14010562932.1
+        version: 0.1.0-14010562932.1
       '@inklang/http':
-        specifier: 0.1.0-14001691298.1
-        version: 0.1.0-14001691298.1
+        specifier: 0.1.0-14010562932.1
+        version: 0.1.0-14010562932.1
       '@inklang/json':
-        specifier: 0.1.0-14001691298.1
-        version: 0.1.0-14001691298.1
+        specifier: 0.1.0-14010562932.1
+        version: 0.1.0-14010562932.1
+      '@inklang/option':
+        specifier: 0.1.0-14010562932.1
+        version: 0.1.0-14010562932.1
       '@inklang/string':
-        specifier: 0.1.0-14001691298.1
-        version: 0.1.0-14001691298.1
+        specifier: 0.1.0-14010562932.1
+        version: 0.1.0-14010562932.1
       '@inklang/url':
-        specifier: 0.1.0-14001691298.1
-        version: 0.1.0-14001691298.1
+        specifier: 0.1.0-14010562932.1
+        version: 0.1.0-14010562932.1
     devDependencies:
       typescript:
         specifier: ^5.8.2
@@ -30,20 +33,23 @@ importers:
 
 packages:
 
-  '@inklang/array@0.1.0-14001691298.1':
-    resolution: {integrity: sha512-4OuL3uIoSk+oHNR4X1TffLM+hWxx8sGdeBbYZxsMFfhLRYoP/c8WGb+gXV8TilEr9LU83xB7qp2OoEdkKvRlyQ==}
+  '@inklang/array@0.1.0-14010562932.1':
+    resolution: {integrity: sha512-F0tokSiHji3wHAaHNhxmxD/3uqsa3VbU+qnanlqOFSDHjW+bhAScbtHHLUlw0WNkvZBISxK63R5K+5shZZlHdQ==}
 
-  '@inklang/http@0.1.0-14001691298.1':
-    resolution: {integrity: sha512-r4WdrdWgDtjc0BYJEL5nxfJ0KqlEjm6Q47GjCQQbxLlHzxyW8zR/77TLXA8GUklBy1bOHT1yx3UwWK0OWz5eOQ==}
+  '@inklang/http@0.1.0-14010562932.1':
+    resolution: {integrity: sha512-dIaOLfiABjGTOx6JgqiJGhfSwyrMaWnulyCyVQrfUdaafR7fu9dKWaQOwF6SGasS+TVNedyuI6CxniH9zdu3VQ==}
 
-  '@inklang/json@0.1.0-14001691298.1':
-    resolution: {integrity: sha512-CWM4daTOQnliOrLQWo2YA7KVctUzDqU6IHLvFaFlvFWZXPFzipK5bZFugjtDFg90WFU04X5AqH5iqNR0JHnhoA==}
+  '@inklang/json@0.1.0-14010562932.1':
+    resolution: {integrity: sha512-phZkMgSWXjDKgw9ZwIN7QkZB+UN8k2hBiY8j2NPyPMMPfAIURKuY0AoejiAymujokyngAEzxfKE/FagvOmzeZQ==}
 
-  '@inklang/string@0.1.0-14001691298.1':
-    resolution: {integrity: sha512-MSlqO3SJM82B7EIa00VYHPygmXtIjIGDBjGO3C1cYEU1P8Co41R28WG0oiODTsmi7G3fb5ExQFMsPvxPjHnbkQ==}
+  '@inklang/option@0.1.0-14010562932.1':
+    resolution: {integrity: sha512-uFdMJCgg2Gwr7IwlEOAke/BYnyW4ErrvVssXoNFBaZK9GX81wNFNVF0c4ieXTM6Qc8iMA2VERLUJ31eUOaO0Ag==}
 
-  '@inklang/url@0.1.0-14001691298.1':
-    resolution: {integrity: sha512-vlFXX9lIF5FKem6zabxjPKOrR4/NAaQMnr9uV/SZQlWgqECyMiL2lVNfQB0GlJpYgTGxKlC5rqA2FLlk5Ovn/Q==}
+  '@inklang/string@0.1.0-14010562932.1':
+    resolution: {integrity: sha512-XrLuuuhykKdUiUg5yy2T1ek39pT7LgAbGacIIgwvf5b4EA4L7XNKsPKRecl0hqwlKftyBGrsHoL4IniLDVB+9A==}
+
+  '@inklang/url@0.1.0-14010562932.1':
+    resolution: {integrity: sha512-20xWJXqgqQIuEyscszQk2o9JfLl54fKCJQEb9vvOiEpWh9ynvZLoMqBuKbngBxH//EcXHItgxwc0r1q5knEKAg==}
 
   typescript@5.8.2:
     resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
@@ -52,14 +58,16 @@ packages:
 
 snapshots:
 
-  '@inklang/array@0.1.0-14001691298.1': {}
+  '@inklang/array@0.1.0-14010562932.1': {}
 
-  '@inklang/http@0.1.0-14001691298.1': {}
+  '@inklang/http@0.1.0-14010562932.1': {}
 
-  '@inklang/json@0.1.0-14001691298.1': {}
+  '@inklang/json@0.1.0-14010562932.1': {}
 
-  '@inklang/string@0.1.0-14001691298.1': {}
+  '@inklang/option@0.1.0-14010562932.1': {}
 
-  '@inklang/url@0.1.0-14001691298.1': {}
+  '@inklang/string@0.1.0-14010562932.1': {}
+
+  '@inklang/url@0.1.0-14010562932.1': {}
 
   typescript@5.8.2: {}
