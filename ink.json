@@ -5,6 +5,6 @@
   "package": "ink.literate.crowous",
   "version": "2.0.0",
   "git": "https://github.com/LiterateInk/Crowous",
-  "annotations": ["http", "url", "array", "json", "string"],
-  "examples": ["get_feeds"]
+  "annotations": ["http", "url", "array", "json", "string", "option"],
+  "examples": ["get_feeds", "get_restaurants"]
 }
