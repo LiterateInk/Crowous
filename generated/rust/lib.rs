@@ -56,6 +56,50 @@ pub struct Contact {
     pub phone: String,
     pub email: String,
 }
+#[derive(Debug, Clone, PartialEq, serde::Serialize, serde::Deserialize)]
+pub enum PaymentMethod {
+    #[serde(rename = "Carte bancaire")]
+    Card,
+    #[serde(rename = "Espèce")]
+    Cash,
+    #[serde(rename = "IZLY")]
+    Izly,
+    #[serde(rename = "Monéo")]
+    Moneo,
+}
+#[derive(Debug, Clone, PartialEq, serde::Serialize, serde::Deserialize)]
+pub enum RestaurantKind {
+    #[serde(rename = "Cafétéria")]
+    Cafetaria,
+    #[serde(rename = "Restaurant")]
+    Restaurant,
+    #[serde(rename = "Restaurant agréé")]
+    ApprovedRestaurant,
+    #[serde(rename = "Restaurant géré")]
+    ManagedRestaurant,
+    #[serde(rename = "Coffee Corner")]
+    CoffeeCorner,
+    #[serde(rename = "Brasserie")]
+    Brewery,
+    #[serde(rename = "Foodtruck")]
+    FoodTruck,
+    #[serde(rename = "Restaurant administratif")]
+    AdministrativeRestaurant,
+    #[serde(rename = "Libre-service")]
+    SelfService,
+    #[serde(rename = "Kiosque")]
+    Kiosk,
+    #[serde(rename = "Pizzéria")]
+    Pizzeria,
+    #[serde(rename = "épicerie")]
+    GroceryStore,
+    #[serde(rename = "Triporteur")]
+    Scooter,
+    #[serde(rename = "crous and go")]
+    CrousAndGo,
+    #[serde(rename = "Sandwicherie")]
+    SandwichShop,
+}
 #[derive(Debug, Clone)]
 pub struct Restaurant {
     pub id: u64,

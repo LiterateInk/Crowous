@@ -39,6 +39,31 @@ expose record contact {
   email: string
 }
 
+expose enum payment_method {
+  card = "Carte bancaire"
+  cash = "Espèce"
+  izly = "IZLY"
+  moneo = "Monéo"
+}
+
+expose enum restaurant_kind {
+  cafetaria = "Cafétéria"
+  restaurant = "Restaurant"
+  approved_restaurant = "Restaurant agréé"
+  managed_restaurant = "Restaurant géré"
+  coffee_corner = "Coffee Corner"
+  brewery = "Brasserie"
+  food_truck = "Foodtruck"
+  administrative_restaurant = "Restaurant administratif"
+  self_service = "Libre-service"
+  kiosk = "Kiosque"
+  pizzeria = "Pizzéria"
+  grocery_store = "épicerie"
+  scooter = "Triporteur"
+  crous_and_go = "crous and go"
+  sandwich_shop = "Sandwicherie"
+}
+
 expose record restaurant {
   id: u64
   title: string

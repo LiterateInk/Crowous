@@ -7,6 +7,7 @@ edition = "2021"
 path = "generated/rust/lib.rs"
 
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }
 inklang_http = { git = "https://github.com/inklang/rust" }
 inklang_url = { git = "https://github.com/inklang/rust" }
 inklang_array = { git = "https://github.com/inklang/rust" }

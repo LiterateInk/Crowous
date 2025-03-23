@@ -109,6 +109,7 @@ dependencies = [
  "inklang_option",
  "inklang_string",
  "inklang_url",
+ "serde",
  "tokio",
 ]
 
@@ -541,12 +542,12 @@ dependencies = [
 [[package]]
 name = "inklang_array"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
+source = "git+https://github.com/inklang/rust#a048bd394fe6ae8ee885c286f50616c3f4536f30"
 
 [[package]]
 name = "inklang_http"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
+source = "git+https://github.com/inklang/rust#a048bd394fe6ae8ee885c286f50616c3f4536f30"
 dependencies = [
  "inklang_url",
  "reqwest",
@@ -555,7 +556,7 @@ dependencies = [
 [[package]]
 name = "inklang_json"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
+source = "git+https://github.com/inklang/rust#a048bd394fe6ae8ee885c286f50616c3f4536f30"
 dependencies = [
  "inklang_json_macro",
  "serde",
@@ -565,7 +566,7 @@ dependencies = [
 [[package]]
 name = "inklang_json_macro"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
+source = "git+https://github.com/inklang/rust#a048bd394fe6ae8ee885c286f50616c3f4536f30"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -575,12 +576,12 @@ dependencies = [
 [[package]]
 name = "inklang_option"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
+source = "git+https://github.com/inklang/rust#a048bd394fe6ae8ee885c286f50616c3f4536f30"
 
 [[package]]
 name = "inklang_string"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
+source = "git+https://github.com/inklang/rust#a048bd394fe6ae8ee885c286f50616c3f4536f30"
 dependencies = [
  "inklang_array",
 ]
@@ -588,7 +589,7 @@ dependencies = [
 [[package]]
 name = "inklang_url"
 version = "0.1.0"
-source = "git+https://github.com/inklang/rust#1aaa6dcd6ec3187664fccd62f1d300b89791e2d0"
+source = "git+https://github.com/inklang/rust#a048bd394fe6ae8ee885c286f50616c3f4536f30"
 dependencies = [
  "url",
 ]
