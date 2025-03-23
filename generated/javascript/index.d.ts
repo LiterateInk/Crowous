@@ -10,8 +10,7 @@ export class Feed {
 	public isDefault: boolean;
 	constructor (name: string, identifier: string, isDefault: boolean);
 }
-export const getFeeds: () => Promise<Inklang__array_Of<Feed>>
-
+export const getFeeds: () => Promise<Inklang__array_Of<Feed>>;
 export class Image {
 	public href: string;
 	public description: string;
@@ -21,6 +20,29 @@ export class Contact {
 	public phone: string;
 	public email: string;
 	constructor (phone: string, email: string);
+}
+export enum PaymentMethod {
+	CARD = "Carte bancaire",
+	CASH = "Espèce",
+	IZLY = "IZLY",
+	MONEO = "Monéo"
+}
+export enum RestaurantKind {
+	CAFETARIA = "Cafétéria",
+	RESTAURANT = "Restaurant",
+	APPROVED_RESTAURANT = "Restaurant agréé",
+	MANAGED_RESTAURANT = "Restaurant géré",
+	COFFEE_CORNER = "Coffee Corner",
+	BREWERY = "Brasserie",
+	FOOD_TRUCK = "Foodtruck",
+	ADMINISTRATIVE_RESTAURANT = "Restaurant administratif",
+	SELF_SERVICE = "Libre-service",
+	KIOSK = "Kiosque",
+	PIZZERIA = "Pizzéria",
+	GROCERY_STORE = "épicerie",
+	SCOOTER = "Triporteur",
+	CROUS_AND_GO = "crous and go",
+	SANDWICH_SHOP = "Sandwicherie"
 }
 export class Restaurant {
 	public id: number;
@@ -45,4 +67,4 @@ export class Restaurant {
 	public paymentMethods: Inklang__array_Of<string>;
 	constructor (id: number, title: string, latitude: number, longitude: number, area: string, address: string, opening: string, closing: string, kind: string, accessibility: boolean, wifi: boolean, shortDescription: string, description: string, access: string, operationalHours: string, contact: Contact, crousAndGo: string, album: Inklang__option_Optional<Image>, photo: Image, paymentMethods: Inklang__array_Of<string>);
 }
-export const getRestaurants: (identifier: string) => Promise<Inklang__array_Of<Restaurant>>
+export const getRestaurants: (identifier: string) => Promise<Inklang__array_Of<Restaurant>>;

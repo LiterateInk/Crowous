@@ -53,6 +53,31 @@ export class Contact {
 	}
 }
 exports.Contact = Contact;
+const PaymentMethod = {
+	CARD: "Carte bancaire",
+	CASH: "Espèce",
+	IZLY: "IZLY",
+	MONEO: "Monéo"
+};
+exports.PaymentMethod = PaymentMethod;
+const RestaurantKind = {
+	CAFETARIA: "Cafétéria",
+	RESTAURANT: "Restaurant",
+	APPROVED_RESTAURANT: "Restaurant agréé",
+	MANAGED_RESTAURANT: "Restaurant géré",
+	COFFEE_CORNER: "Coffee Corner",
+	BREWERY: "Brasserie",
+	FOOD_TRUCK: "Foodtruck",
+	ADMINISTRATIVE_RESTAURANT: "Restaurant administratif",
+	SELF_SERVICE: "Libre-service",
+	KIOSK: "Kiosque",
+	PIZZERIA: "Pizzéria",
+	GROCERY_STORE: "épicerie",
+	SCOOTER: "Triporteur",
+	CROUS_AND_GO: "crous and go",
+	SANDWICH_SHOP: "Sandwicherie"
+};
+exports.RestaurantKind = RestaurantKind;
 export class Restaurant {
 	id;
 	title;

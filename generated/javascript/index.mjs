@@ -49,6 +49,29 @@ export class Contact {
 		this.email = email;
 	}
 }
+export const PaymentMethod = {
+	CARD: "Carte bancaire",
+	CASH: "Espèce",
+	IZLY: "IZLY",
+	MONEO: "Monéo"
+};
+export const RestaurantKind = {
+	CAFETARIA: "Cafétéria",
+	RESTAURANT: "Restaurant",
+	APPROVED_RESTAURANT: "Restaurant agréé",
+	MANAGED_RESTAURANT: "Restaurant géré",
+	COFFEE_CORNER: "Coffee Corner",
+	BREWERY: "Brasserie",
+	FOOD_TRUCK: "Foodtruck",
+	ADMINISTRATIVE_RESTAURANT: "Restaurant administratif",
+	SELF_SERVICE: "Libre-service",
+	KIOSK: "Kiosque",
+	PIZZERIA: "Pizzéria",
+	GROCERY_STORE: "épicerie",
+	SCOOTER: "Triporteur",
+	CROUS_AND_GO: "crous and go",
+	SANDWICH_SHOP: "Sandwicherie"
+};
 export class Restaurant {
 	id;
 	title;
